@@ -1,6 +1,6 @@
 # DynamoDB counter sample
 
-This is a simple counter app using DynamoDB in local-stac.
+This is a simple counter app using DynamoDB in local-stack.
 
 # Instructions
 
