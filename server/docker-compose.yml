@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  localstack:
+    container_name: '${LOCALSTACK_DOCKER_NAME-localstack_main}'
+    image: localstack/localstack
+    ports:
+      - 4566:4566 # LocalStack Gateway
+    environment:
+      - SERVICES=dynamodb
+      - AWS_DEFAULT_REGION=eu-west-1
+    volumes:
+      - ./scripts/init-dynamodb.sh:/etc/localstack/init/ready.d/init-dynamodb.sh
